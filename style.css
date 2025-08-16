@@ -1,27 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Default (Light Mode) Theme */
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #333;
+  --card-bg: #fff;
+  --accent-color: #4facfe;
+  --footer-bg: #111;
+  --footer-text: #fff;
+  --skill-bg: #e0f7fa;
+  --btn-bg: #fff;
+  --btn-text: #333;
+  --btn-hover-bg: #333;
+  --btn-hover-text: #fff;
+  --hero-gradient: linear-gradient(120deg, #7652a7, #356466);
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --card-bg: #1e1e1e;
+  --accent-color: #00f2fe;
+  --footer-bg: #000;
+  --footer-text: #bbb;
+  --skill-bg: #333;
+  --btn-bg: #1e1e1e;
+  --btn-text: #f1f1f1;
+  --btn-hover-bg: #f1f1f1;
+  --btn-hover-text: #121212;
+  --hero-gradient: linear-gradient(120deg, #11374a, #390254);
+  --shadow-color: rgba(0,0,0,0.6);
+}
+
+/* Global */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f9fafb;
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Sections */
 #about, #projects, #experience, #skills, #education, #resume {
   padding: 40px 20px;
   max-width: 900px;
   margin: auto;
 }
 
+/* Experience Items */
 .exp-item {
-  background: #fff;
+  background: var(--card-bg);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Skills */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -30,22 +70,24 @@ body {
   padding: 0;
 }
 .skills-list li {
-  background: #e0f7fa;
+  background: var(--skill-bg);
   padding: 8px 15px;
   border-radius: 20px;
   font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-
+/* Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(120deg, #4facfe, #00f2fe);
+  background: var(--hero-gradient);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  transition: background 0.3s ease;
 }
 
 .profile-pic {
@@ -58,27 +100,30 @@ body {
   object-fit: cover;
 }
 
-
+/* Buttons */
 .btn {
   padding: 10px 20px;
-  background: #fff;
-  color: #333;
+  background: var(--btn-bg);
+  color: var(--btn-text);
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
   margin-top: 20px;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 .btn:hover {
-  background: #333;
-  color: #fff;
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
+/* Headings */
 h2 {
   text-align: center;
   margin-top: 50px;
 }
 
+/* Project Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,19 +132,40 @@ h2 {
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform 0.2s, background 0.3s ease, color 0.3s ease;
 }
 .card:hover {
   transform: translateY(-5px);
 }
 
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
-  color: #fff;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  transition: background 0.3s ease, color 0.3s ease;
 }
