@@ -161,6 +161,27 @@ h2 {
   opacity: 0.8;
 }
 
+.course-category {
+  margin-bottom: 25px;
+}
+
+.course-category h4 {
+  margin-bottom: 8px;
+  color: var(--accent-color);
+  text-align: left;
+  font-weight: 600;
+}
+
+.course-category ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.course-category li {
+  margin-bottom: 6px;
+}
+
 /* Footer */
 footer {
   text-align: center;
