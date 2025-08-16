@@ -11,36 +11,106 @@
   <header class="hero">
     <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="profile-pic" width="160" height="160">
     <h1>Hi, I’m Bhaskar Biswas</h1>
-    <p>Robotics • Autonomous Systems • Embedded</p>
+    <p>IIT Bombay, Engineering Physics, B.Tech(2026)</p>
     <a href="#projects" class="btn">See My Work</a>
   </header>
 
-  <!-- Projects -->
+  <!-- About Section -->
+  <section id="about">
+  <h2>About Me</h2>
+  <p>
+    I interned at <strong>Jaguar Land Rover (VP-Propulsion Software)</strong>, where I developed 
+    automation tools in Python and MATLAB for ECU validation and AUTOSAR workflows. 
+    Following the success of my internship, I received a <strong>Pre-Placement Offer (PPO)</strong> 
+    and will be joining JLR as a <strong>full-time engineer</strong> soon.
+  </p>
+  <p>
+    I was a part of the <strong>IITB Racing Driverless team</strong>, working across perception, planning, and controls 
+    for autonomous systems. I enjoy building things end-to-end — from embedded hardware to ML pipelines — 
+    and writing about what I learn.
+  </p>
+</section>
+
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="card">
         <h3>YOLOv1 Implementation</h3>
-        <p>Built object detection from scratch in PyTorch (~84% mAP).</p>
+        <p>Implemented object detection model in PyTorch, trained on PASCAL VOC with ~84.3% mAP @ IoU 0.5.</p>
       </div>
       <div class="card">
         <h3>Star Tracker</h3>
-        <p>Arduino + IMU + RTC with self-leveling platform.</p>
+        <p>Arduino-based tracker with IMU, RTC, and self-levelling platform for robust celestial tracking.</p>
       </div>
-      <!-- Add more project cards -->
+      <div class="card">
+        <h3>Smart Appliance IR Controller</h3>
+        <p>Atmega328p-based universal IR controller with Bluetooth integration.</p>
+      </div>
+      <div class="card">
+        <h3>Battery Health Platform</h3>
+        <p>MATLAB ECM modelling + ML-based SOH/SOC estimation; built for JLR Global Hackathon.</p>
+      </div>
+      <div class="card">
+        <h3>B.Tech Project — Distributed Optimization on SO(3)</h3>
+        <p>
+          Developed quaternion-based distributed controller with a g-polar Morse potential for multi-agent SO(3) consensus.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Obstacle-Removing Line Follower</h3>
+        <p>Line follower bot with obstacle removal; designed chassis in Fusion360 & fabricated via 3D printing.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- Experience Section -->
   <section id="experience">
-    <h2>Technical Experience</h2>
-    <ul>
-      <li><strong>JLR — VP-Propulsion Intern:</strong> Automated AUTOSAR ARXML workflows using Python + PyQt5.</li>
-      <li><strong>IITB Racing Driverless:</strong> Worked on CV, SLAM, planning, controls; ROS1 → ROS2 migration.</li>
+    <h2>Experience</h2>
+    <div class="exp-item">
+      <h3>Jaguar Land Rover — VP-Propulsion Software Intern (May–July 2025)</h3>
+      <ul>
+        <li>Developed a Python + PyQt5 tool for automated AUTOSAR ARXML extraction and comparison.</li>
+        <li>Automated ECU validation workflows with structured reports.</li>
+        <li>Built MATLAB App Designer tools for model verification.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <h3>IITB Racing Driverless — Autonomous Integration & Simulation (Aug 2023–Apr 2025)</h3>
+      <ul>
+        <li>Worked on computer vision, SLAM, motion planning, and controls.</li>
+        <li>Contributed to ROS1 → ROS2 migration for autonomous stack.</li>
+        <li>Built a 1/5th scale driverless prototype with custom PCBs and Virtual CAN setup.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <h3>IIT Bombay Racing — Electrical Division Trainee (Dec 2022–Aug 2023)</h3>
+      <ul>
+        <li>Designed PCBs for current sensing with Hall-effect sensors (~50A range).</li>
+        <li>Performed LTSpice simulations for circuit validation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python, C++, MATLAB</li>
+      <li>PyTorch, OpenCV, ROS1/ROS2</li>
+      <li>Embedded Systems (STM32, Arduino, Atmega)</li>
+      <li>PCB Design (KiCad, Altium)</li>
+      <li>Control Systems, Optimization, SLAM</li>
     </ul>
   </section>
 
-  <!-- Resume & Contact -->
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Indian Institute of Technology, Bombay</strong> — Engineering Physics, B.Tech (Expected 2026)</p>
+  </section>
+
+  <!-- Resume & Contact Section -->
   <section id="resume">
     <h2>Resume</h2>
     <a href="assets/My_Resume.pdf" class="btn" download>Download Resume</a>
@@ -51,7 +121,7 @@
     <p>
       <a href="mailto:studybhaskar654@gmail.com">Email</a> |
       <a href="https://github.com/PyroSage">GitHub</a> |
-      <a href="https://linkedin.com/in/bhaskar-biswas-623222251">LinkedIn</a>
+      <a href="https://linkedin.com/in/bhaskar-biswas-62322225">LinkedIn</a>
     </p>
   </footer>
 
