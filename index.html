@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/profile.jpeg">
 </head>
-<body>
-  <!-- Top Navigation Bar -->
+<body class="fade-in">
   <nav class="top-nav">
     <div class="nav-left">
       <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="nav-profile">
@@ -22,24 +21,19 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="profile-pic" width="160" height="160">
     <h1>Hi, I’m Bhaskar Biswas</h1>
     <p>IIT Bombay, Engineering Physics with minor in Robotics, B.Tech(2026)</p>
     <a href="#projects" class="btn">See My Work</a>
-    <!-- <button id="theme-toggle" class="btn toggle-btn">🌙 Dark Mode</button> -->
-  </header>
+    </header>
 
-  <!-- About Section -->
   <section id="about">
   <h2>About Me</h2>
   <div class="about-container">
     
-    <!-- Left Column -->
     <div class="about-left">
       
-      <!-- JLR Internship -->
       <div class="about-block">
         <img src="assets/jlr.jpg" alt="Jaguar Land Rover Internship" class="about-img-side">
         <div class="about-text">
@@ -53,7 +47,6 @@
         </div>
       </div>
 
-      <!-- IITB Racing -->
       <div class="about-block">
         <img src="assets/racing.jpg" alt="IITB Racing Driverless Team" class="about-img-side">
         <div class="about-text">
@@ -65,7 +58,6 @@
         </div>
       </div>
 
-      <!-- Skills -->
       <div class="skills-tags">
         <span>Python</span>
         <span>C++</span>
@@ -78,7 +70,6 @@
       </div>
     </div>
     
-    <!-- Right Column -->
     <div class="about-right">
       <ul class="facts-list">
         <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
@@ -95,7 +86,6 @@
 </section>
 
 
-  <!-- Experience Section -->
   <section id="experience">
     <h2>Technical Experience</h2>
     <div class="exp-item">
@@ -132,7 +122,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <h2>Skills</h2>
     <ul class="skills-list">
@@ -144,7 +133,6 @@
     </ul>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
     <h2>Key Projects</h2>
     <div class="project-grid">
@@ -175,8 +163,7 @@
     </div>
   </section>
 
-  <!-- Education Section -->
-<section id="education">
+  <section id="education">
   <h2>Education</h2>
   <p><strong>Indian Institute of Technology, Bombay</strong> — Engineering Physics, B.Tech (Expected 2026)</p>
   
@@ -226,10 +213,11 @@
   </div>
 </section>
 
-  <!-- Resume & Contact Section -->
   <section id="resume">
     <h2>Resume</h2>
-    <a href="assets/My_Resume.pdf" class="btn" download>Download Resume</a>
+    <div class="resume-container">
+      <a href="assets/My_Resume.pdf" class="btn" download>Download</a>
+    </div>
   </section>
 
   <footer>
