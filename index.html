@@ -33,51 +33,67 @@
 
   <!-- About Section -->
   <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
+  <h2>About Me</h2>
+  <div class="about-container">
+    
+    <!-- Left Column -->
+    <div class="about-left">
       
-      <!-- Left Column -->
-      <div class="about-left">
-        <p>
-          I was a part of the IITB Racing Driverless team, working across perception, planning, 
-          and controls for autonomous systems. I enjoy building things end-to-end — from embedded 
-          hardware to ML pipelines — and writing about what I learn.
-        </p>
-        <p>
-          I also interned at <strong>Jaguar Land Rover (VP-Propulsion Software)</strong>, where I 
-          developed automation tools in Python and MATLAB for ECU validation and AUTOSAR workflows. 
-          Following the success of my internship, I received a <strong>Pre-Placement Offer (PPO)</strong> 
-          and will be joining JLR as a <strong>full-time engineer</strong> soon.
-        </p>
-
-        <!-- Skills tags -->
-        <div class="skills-tags">
-          <span>Python</span>
-          <span>C++</span>
-          <span>MATLAB</span>
-          <span>ROS1/ROS2</span>
-          <span>PyTorch</span>
-          <span>OpenCV</span>
-          <span>STM32</span>
-          <span>PCB Design</span>
+      <!-- JLR Internship -->
+      <div class="about-block">
+        <img src="assets/jlr.jpg" alt="Jaguar Land Rover Internship" class="about-img-side">
+        <div class="about-text">
+          <p>
+            I interned at <strong>Jaguar Land Rover (VP–Propulsion Software)</strong>, 
+            where I developed automation tools in Python and MATLAB for ECU validation 
+            and AUTOSAR workflows. Following the success of my internship, I received 
+            a <strong>Pre-Placement Offer (PPO)</strong> and will be joining JLR as a 
+            <strong>full-time engineer</strong> soon.
+          </p>
         </div>
       </div>
-      
-      <!-- Right Column -->
-      <div class="about-right">
-        <ul class="facts-list">
-          <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
-          <li>🤖 Research Interests: Robotics, Control Systems, Optimization, Reinforcement Learning</li>
-          <li>🏆 Top IIT JEE Ranker | Member of IITB Racing Driverless</li>
-          <li>🌍 Fluent in English, Hindi, Bengali | Learning Japanese</li>
-          <li>⚡ Enthusiast in Autonomous Systems, Embedded Design, and AI</li>
-          <li>📍 Based in Mumbai, India</li>
-          <li>📚 Always Learning & Exploring New Technologies</li>
-        </ul>
+
+      <!-- IITB Racing -->
+      <div class="about-block">
+        <img src="assets/racing.jpg" alt="IITB Racing Driverless Team" class="about-img-side">
+        <div class="about-text">
+          <p>
+            I was a part of the <strong>IITB Racing Driverless team</strong>, working across 
+            perception, planning, and controls for autonomous systems. I enjoy building 
+            things end-to-end — from embedded hardware to ML pipelines — and writing about what I learn.
+          </p>
+        </div>
       </div>
-      
+
+      <!-- Skills -->
+      <div class="skills-tags">
+        <span>Python</span>
+        <span>C++</span>
+        <span>MATLAB</span>
+        <span>ROS1/ROS2</span>
+        <span>PyTorch</span>
+        <span>OpenCV</span>
+        <span>STM32</span>
+        <span>PCB Design</span>
+      </div>
     </div>
-  </section>
+    
+    <!-- Right Column -->
+    <div class="about-right">
+      <ul class="facts-list">
+        <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
+        <li>🤖 Research Interests: Robotics, Control Systems, Optimization, Reinforcement Learning</li>
+        <li>🏆 Top IIT JEE Ranker | Member of IITB Racing Driverless</li>
+        <li>🌍 Fluent in English, Hindi, Bengali | Learning Japanese</li>
+        <li>⚡ Enthusiast in Autonomous Systems, Embedded Design, and AI</li>
+        <li>📍 Based in Mumbai, India</li>
+        <li>📚 Always Learning & Exploring New Technologies</li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
 
   <!-- Experience Section -->
   <section id="experience">
@@ -132,10 +148,10 @@
   <section id="projects">
     <h2>Key Projects</h2>
     <div class="project-grid">
-      <div class="card">
+      <a href="https://github.com/PyroSage/Yolov1_scratch" target="_blank" class="card">
         <h3>YOLOv1 Implementation</h3>
         <p>Implemented object detection model in PyTorch, trained on PASCAL VOC with ~84.3% mAP @ IoU 0.5.</p>
-      </div>
+      </a>
       <div class="card">
         <h3>Star Tracker</h3>
         <p>Arduino-based tracker with IMU, RTC, and self-levelling platform for robust celestial tracking.</p>
@@ -148,10 +164,10 @@
         <h3>Battery Health Platform</h3>
         <p>MATLAB ECM modelling + ML-based SOH/SOC estimation; built for JLR Global Hackathon.</p>
       </div>
-      <div class="card">
+      <a href="https://github.com/PyroSage/FlappyBirdClone" target="_blank" class="card">
         <h3>Flappy Bird Clone</h3>
-          <p>Designed and developed a Flappy Bird clone as a personal project using <strong>Unity</strong> and <strong>C#</strong>.</p>
-      </div>
+        <p>Designed and developed a Flappy Bird clone as a personal project using Unity and C#.</p>
+      </a>
       <div class="card">
         <h3>Obstacle-Removing Line Follower</h3>
         <p>Line follower bot with obstacle removal; designed chassis in Fusion360 & fabricated via 3D printing.</p>
@@ -166,45 +182,47 @@
   
   <h3>Relevant Coursework</h3>
 
-  <div class="course-category">
-    <h4>Computer Science and Robotics</h4>
-    <ul class="course-list">
-      <li>Computer Programming and Utilisation</li>
-      <li>Makerspace</li>
-      <li>Artificial Intelligence and Data Science</li>
-      <li>Control Theory</li>
-      <li>Robotics</li>
-      <li>Non-linear Dynamics</li>
-      <li>Fundamentals of Digital Image Processing</li>
-      <li>Nanodevices and Applications</li>
-    </ul>
-  </div>
+  <div class="coursework-grid">
+    <div class="course-category">
+      <h4>Computer Science and Robotics</h4>
+      <ul class="course-list">
+        <li>Computer Programming and Utilisation</li>
+        <li>Makerspace</li>
+        <li>Artificial Intelligence and Data Science</li>
+        <li>Control Theory</li>
+        <li>Robotics</li>
+        <li>Non-linear Dynamics</li>
+        <li>Fundamentals of Digital Image Processing</li>
+        <li>Nanodevices and Applications</li>
+      </ul>
+    </div>
 
-  <div class="course-category">
-    <h4>Physics and Electronics</h4>
-    <ul class="course-list">
-      <li>Quantum Physics</li>
-      <li>Classical Mechanics</li>
-      <li>Analog Electronics</li>
-      <li>Digital Electronics & Microprocessors</li>
-      <li>Statistical Mechanics</li>
-      <li>Numerical Analysis</li>
-      <li>Electromagnetic Theory</li>
-      <li>Introduction to Condensed Matter Physics</li>
-      <li>Light Matter Interaction</li>
-    </ul>
-  </div>
+    <div class="course-category">
+      <h4>Physics and Electronics</h4>
+      <ul class="course-list">
+        <li>Quantum Physics</li>
+        <li>Classical Mechanics</li>
+        <li>Analog Electronics</li>
+        <li>Digital Electronics & Microprocessors</li>
+        <li>Statistical Mechanics</li>
+        <li>Numerical Analysis</li>
+        <li>Electromagnetic Theory</li>
+        <li>Introduction to Condensed Matter Physics</li>
+        <li>Light Matter Interaction</li>
+      </ul>
+    </div>
 
-  <div class="course-category">
-    <h4>Mathematics</h4>
-    <ul class="course-list">
-      <li>Calculus</li>
-      <li>Linear Algebra</li>
-      <li>Differential Equations</li>
-      <li>Complex Analysis and Integral Transform</li>
-      <li>Estimation on Lie Groups</li>
-      <li>Analytical and Geometric Dynamics</li>
-    </ul>
+    <div class="course-category">
+      <h4>Mathematics</h4>
+      <ul class="course-list">
+        <li>Calculus</li>
+        <li>Linear Algebra</li>
+        <li>Differential Equations</li>
+        <li>Complex Analysis and Integral Transform</li>
+        <li>Estimation on Lie Groups</li>
+        <li>Analytical and Geometric Dynamics</li>
+      </ul>
+    </div>
   </div>
 </section>
 

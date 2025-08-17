@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Default (Light Mode) Theme */
+/* ===============================
+   THEME VARIABLES
+=============================== */
+
+/* Light Mode (default) */
 :root {
   --bg-color: #f9fafb;
   --text-color: #333;
@@ -34,7 +38,9 @@ body.dark-mode {
   --shadow-color: rgba(0,0,0,0.6);
 }
 
-/* Global */
+/* ===============================
+   GLOBAL STYLES
+=============================== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -44,74 +50,56 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Sections */
-#about, #projects, #experience, #skills, #education, #resume {
-  padding: 40px 20px;
-  max-width: 900px;
+h2 {
+  text-align: center;
+  margin: 50px 0 30px;
+}
+
+/* Standardize all sections */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
   margin: auto;
+  box-sizing: border-box;
 }
 
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 100px;
-  justify-content: space-between;
-}
-
-.about-left, .about-right {
-  flex: 1;
-  min-width: 300px;
-}
-
-.skills-tags {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills-tags span {
-  background: var(--skill-bg);
-  color: var(--text-color);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.facts-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.facts-list li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-/* Top Navigation */
+/* ===============================
+   NAVIGATION
+=============================== */
 .top-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 12px 24px; /* reduced right padding */
+  padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--bg-color);
   box-shadow: 0 2px 8px var(--shadow-color);
   z-index: 1000;
+  box-sizing: border-box;
   transition: background 0.3s ease, color 0.3s ease;
-  box-sizing: border-box; /* ensures no overflow */
 }
 
 .top-nav .logo {
   font-weight: 700;
   font-size: 18px;
   color: var(--text-color);
+}
+
+.top-nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
 }
 
 .top-nav .nav-right {
@@ -131,13 +119,13 @@ body {
   color: var(--accent-color);
 }
 
-/* Dark Mode Toggle in Nav */
+/* Dark Mode Toggle */
 .top-nav .toggle-btn {
   padding: 6px 16px;
   font-size: 14px;
   border: 1px solid var(--accent-color);
-  cursor: pointer;
   border-radius: 20px;
+  cursor: pointer;
   background: var(--btn-bg);
   color: var(--btn-text);
   font-weight: 600;
@@ -147,55 +135,15 @@ body {
   box-shadow: 0 2px 6px var(--shadow-color);
   transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
 }
-
 .top-nav .toggle-btn:hover {
   background: var(--accent-color);
   color: #fff;
   transform: scale(1.05);
 }
 
-.top-nav .nav-left {
-  display: flex;
-  align-items: center; /* ensures vertical alignment */
-  gap: 10px;           /* space between image and text */
-}
-
-.nav-profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--accent-color);
-}
-
-
-/* Experience Items */
-.exp-item {
-  background: var(--card-bg);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px var(--shadow-color);
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Skills */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-}
-.skills-list li {
-  background: var(--skill-bg);
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-/* Hero Section */
+/* ===============================
+   HERO SECTION
+=============================== */
 .hero {
   height: 100vh;
   background: var(--hero-gradient);
@@ -213,40 +161,130 @@ body {
   height: 160px;
   border-radius: 50%;
   border: 4px solid #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
   object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Buttons */
-.btn {
-  padding: 10px 20px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border-radius: 25px;
-  text-decoration: none;
+/* ===============================
+   ABOUT SECTION
+=============================== */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+.about-left, .about-right {
+  width: 100%;
+}
+
+/* About blocks (image + text) */
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about-block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.about-img-side {
+  flex: 0 0 420px;
+  max-width: 420px;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-img-side:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+}
+
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Skills tags */
+.skills-tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills-tags span {
+  background: var(--skill-bg);
+  color: var(--text-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+/* Facts list */
+.facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.facts-list li {
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   EXPERIENCE
+=============================== */
+.exp-item {
+  background: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===============================
+   SKILLS SECTION
+=============================== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  background: var(--skill-bg);
+  padding: 8px 15px;
+  border-radius: 20px;
   font-weight: 600;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-.btn:hover {
-  background: var(--btn-hover-bg);
-  color: var(--btn-hover-text);
+  transition: background 0.3s ease;
 }
 
-/* Headings */
-h2 {
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* Project Grid */
+/* ===============================
+   PROJECTS
+=============================== */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
+}
+
+.project-grid a.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .card {
@@ -260,28 +298,56 @@ h2 {
   transform: translateY(-5px);
 }
 
+/* ===============================
+   COURSEWORK
+=============================== */
+.coursework-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  margin-top: 20px;
+}
+
 .course-category {
   margin-bottom: 25px;
 }
-
 .course-category h4 {
   margin-bottom: 8px;
   color: var(--accent-color);
-  text-align: left;
   font-weight: 600;
+  text-align: left;
 }
-
 .course-category ul {
   list-style-type: disc;
   padding-left: 20px;
   margin: 0;
 }
-
 .course-category li {
   margin-bottom: 6px;
 }
 
-/* Footer */
+/* ===============================
+   BUTTONS
+=============================== */
+.btn {
+  padding: 10px 20px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+/* ===============================
+   FOOTER
+=============================== */
 footer {
   text-align: center;
   padding: 20px;
