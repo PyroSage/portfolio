@@ -5,32 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bhaskar Biswas | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/profile.jpeg">
 </head>
 <body>
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="nav-profile">
+      <span class="logo">Bhaskar Biswas</span>
+    </div>
+    <div class="nav-right">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=studybhaskar654@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://github.com/PyroSage" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/bhaskar-biswas-623222251" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <header class="hero">
     <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="profile-pic" width="160" height="160">
     <h1>Hi, I’m Bhaskar Biswas</h1>
     <p>IIT Bombay, Engineering Physics with minor in Robotics, B.Tech(2026)</p>
     <a href="#projects" class="btn">See My Work</a>
-    <button id="theme-toggle" class="btn toggle-btn">🌙 Dark Mode</button>
+    <!-- <button id="theme-toggle" class="btn toggle-btn">🌙 Dark Mode</button> -->
   </header>
 
   <!-- About Section -->
   <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I interned at <strong>Jaguar Land Rover (VP-Propulsion Software)</strong>, where I developed 
-    automation tools in Python and MATLAB for ECU validation and AUTOSAR workflows. 
-    Following the success of my internship, I received a <strong>Pre-Placement Offer (PPO)</strong> 
-    and will be joining JLR as a <strong>full-time engineer</strong> soon.
-  </p>
-  <p>
-    I was a part of the <strong>IITB Racing Driverless team</strong>, working across perception, planning, and controls 
-    for autonomous systems. I enjoy building things end-to-end — from embedded hardware to ML pipelines — 
-    and writing about what I learn.
-  </p>
-</section>
+    <h2>About Me</h2>
+    <div class="about-container">
+      
+      <!-- Left Column -->
+      <div class="about-left">
+        <p>
+          I was a part of the IITB Racing Driverless team, working across perception, planning, 
+          and controls for autonomous systems. I enjoy building things end-to-end — from embedded 
+          hardware to ML pipelines — and writing about what I learn.
+        </p>
+        <p>
+          I also interned at <strong>Jaguar Land Rover (VP-Propulsion Software)</strong>, where I 
+          developed automation tools in Python and MATLAB for ECU validation and AUTOSAR workflows. 
+          Following the success of my internship, I received a <strong>Pre-Placement Offer (PPO)</strong> 
+          and will be joining JLR as a <strong>full-time engineer</strong> soon.
+        </p>
+
+        <!-- Skills tags -->
+        <div class="skills-tags">
+          <span>Python</span>
+          <span>C++</span>
+          <span>MATLAB</span>
+          <span>ROS1/ROS2</span>
+          <span>PyTorch</span>
+          <span>OpenCV</span>
+          <span>STM32</span>
+          <span>PCB Design</span>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="about-right">
+        <ul class="facts-list">
+          <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
+          <li>🤖 Research Interests: Robotics, Control Systems, Optimization, Reinforcement Learning</li>
+          <li>🏆 Top IIT JEE Ranker | Member of IITB Racing Driverless</li>
+          <li>🌍 Fluent in English, Hindi, Bengali | Learning Japanese</li>
+          <li>⚡ Enthusiast in Autonomous Systems, Embedded Design, and AI</li>
+          <li>📍 Based in Mumbai, India</li>
+          <li>📚 Always Learning & Exploring New Technologies</li>
+        </ul>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Technical Experience</h2>
+    <div class="exp-item">
+      <h3>Jaguar Land Rover — VP-Propulsion Software Intern (May–July 2025)</h3>
+      <ul>
+        <li>Developed a Python + PyQt5 tool for automated AUTOSAR ARXML extraction and comparison.</li>
+        <li>Automated ECU validation workflows with structured reports.</li>
+        <li>Built MATLAB App Designer tools for model verification.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <h3>IITB Racing Driverless — Autonomous Integration & Simulation (Aug 2023–Apr 2025)</h3>
+      <ul>
+        <li>Worked on computer vision, SLAM, motion planning, and controls.</li>
+        <li>Contributed to ROS1 → ROS2 migration for autonomous stack.</li>
+        <li>Built a 1/5th scale driverless prototype with custom PCBs and Virtual CAN setup.</li>
+        <li>Published on arXiv: “IIT Bombay Racing Driverless: Autonomous Driving Stack for Formula Student AI,” covering research and development in Computer Vision, SLAM, Motion Planning, and Controls.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <h3>IIT Bombay Racing — Electrical Division Trainee (Dec 2022–Aug 2023)</h3>
+      <ul>
+        <li>Designed PCBs for current sensing with Hall-effect sensors (~50A range).</li>
+        <li>Performed LTSpice simulations for circuit validation.</li>
+      </ul>
+    </div>
+    <div class="exp-item">
+      <h3>B.Tech Project — IIT Bombay (Jan '24 – Present)</h3>
+      <ul>
+        <li>Worked on distributed optimization algorithms for autonomous multi-agent systems using Euler-Lagrange dynamics.</li>
+        <li>Implemented simulation studies in Python and MATLAB to validate theoretical results.</li>
+        <li>Research paper currently in progress.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python, C++, MATLAB</li>
+      <li>PyTorch, OpenCV, ROS1/ROS2</li>
+      <li>Embedded Systems (STM32, Arduino, Atmega)</li>
+      <li>PCB Design (KiCad, Altium)</li>
+      <li>Control Systems, Optimization, SLAM</li>
+    </ul>
+  </section>
 
   <!-- Projects Section -->
   <section id="projects">
@@ -53,56 +149,14 @@
         <p>MATLAB ECM modelling + ML-based SOH/SOC estimation; built for JLR Global Hackathon.</p>
       </div>
       <div class="card">
-        <h3>B.Tech Project — Distributed Optimization on SO(3)</h3>
-        <p>
-          Developed quaternion-based distributed controller with a g-polar Morse potential for multi-agent SO(3) consensus.
-        </p>
+        <h3>Flappy Bird Clone</h3>
+          <p>Designed and developed a Flappy Bird clone as a personal project using <strong>Unity</strong> and <strong>C#</strong>.</p>
       </div>
       <div class="card">
         <h3>Obstacle-Removing Line Follower</h3>
         <p>Line follower bot with obstacle removal; designed chassis in Fusion360 & fabricated via 3D printing.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Technical Experience</h2>
-    <div class="exp-item">
-      <h3>Jaguar Land Rover — VP-Propulsion Software Intern (May–July 2025)</h3>
-      <ul>
-        <li>Developed a Python + PyQt5 tool for automated AUTOSAR ARXML extraction and comparison.</li>
-        <li>Automated ECU validation workflows with structured reports.</li>
-        <li>Built MATLAB App Designer tools for model verification.</li>
-      </ul>
-    </div>
-    <div class="exp-item">
-      <h3>IITB Racing Driverless — Autonomous Integration & Simulation (Aug 2023–Apr 2025)</h3>
-      <ul>
-        <li>Worked on computer vision, SLAM, motion planning, and controls.</li>
-        <li>Contributed to ROS1 → ROS2 migration for autonomous stack.</li>
-        <li>Built a 1/5th scale driverless prototype with custom PCBs and Virtual CAN setup.</li>
-      </ul>
-    </div>
-    <div class="exp-item">
-      <h3>IIT Bombay Racing — Electrical Division Trainee (Dec 2022–Aug 2023)</h3>
-      <ul>
-        <li>Designed PCBs for current sensing with Hall-effect sensors (~50A range).</li>
-        <li>Performed LTSpice simulations for circuit validation.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python, C++, MATLAB</li>
-      <li>PyTorch, OpenCV, ROS1/ROS2</li>
-      <li>Embedded Systems (STM32, Arduino, Atmega)</li>
-      <li>PCB Design (KiCad, Altium)</li>
-      <li>Control Systems, Optimization, SLAM</li>
-    </ul>
   </section>
 
   <!-- Education Section -->
