@@ -30,6 +30,12 @@
   --hard-shadow-hover: 10px 10px 0px var(--shadow-color);
 }
 
+:root {
+  /* Change to this for Orange Glow */
+  --glow-color: #ff7c3a; 
+  --glow-spread: rgba(255, 85, 0, 0.6);
+}
+
 /* Dark Mode (Molten Core) */
 body.dark-mode {
   --bg-color: #1c1917;
@@ -173,7 +179,7 @@ section {
 .top-nav .logo {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   color: #000 !important; 
   background: var(--accent-color);
   padding: 0 10px;
@@ -263,7 +269,7 @@ section {
   font-size: 4.5rem;
   line-height: 0.95;
   margin-bottom: 25px;
-  text-shadow: 5px 5px 0 var(--shadow-color); 
+  text-shadow: 4px 4px 0 var(--shadow-color); 
 }
 
 .hero p {
@@ -275,7 +281,7 @@ section {
   display: inline-block;
   padding: 10px 15px;
   border: 2px solid #000;
-  box-shadow: 5px 5px 0 #000;
+  box-shadow: 4px 4px 0 #000;
 }
 
 /* ===============================
@@ -397,7 +403,7 @@ section {
   display: inline-block;
   margin-top: 25px;
   border: var(--border-width) solid var(--border-color);
-  box-shadow: 8px 8px 0 var(--accent-color);
+  box-shadow: 4px 4px 0 var(--accent-color);
   transition: all 0.2s;
 }
 
@@ -501,4 +507,59 @@ footer a {
   .resume-container { padding: 30px; }
   
   .btn { width: 100%; text-align: center; }
+}
+
+/* ===============================
+   GLOW EFFECTS (Fixed for Orange Theme)
+=============================== */
+
+:root {
+  /* THEME INTEGRATION: 
+     Using your --accent-color (#fb923c) for the bright inner light
+     and --hero-bg (#ea580c) for the outer radioactive spread. */
+  --glow-color: #fb923c; 
+  --glow-spread: rgba(234, 88, 12, 0.7);
+}
+
+/* 1. The Animation (Subtle Flicker) */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 
+        0 0 4px #fff,
+        0 0 10px var(--glow-color),
+        0 0 20px var(--glow-color),
+        0 0 40px var(--glow-spread),
+        0 0 80px var(--glow-spread);
+        opacity: 1;
+  }
+  20%, 24%, 55% {        
+    text-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+/* 2. The Class to Apply */
+.glow-effect {
+  color: #ffffff; /* Center of text is white hot */
+  font-family: 'Space Mono', monospace; 
+  text-transform: uppercase;
+  
+  /* Initial static shadow */
+  text-shadow: 
+      0 0 4px #fff,             
+      0 0 10px var(--glow-color), 
+      0 0 20px var(--glow-color), 
+      0 0 40px var(--glow-spread),
+      0 0 80px var(--glow-spread);
+      
+  /* animation: neon-flicker 4s infinite alternate; */
+}
+
+/* 3. Light Mode Safety Fallback 
+   (Hides the neon flicker on white backgrounds to keep it readable) */
+body:not(.dark-mode) .glow-effect {
+  color: #260800;
+  text-shadow: 
+      2px 2px 0px #000000; /* Brutalist Hard Shadow */
+  font-weight: 900;
 }
