@@ -10,95 +10,73 @@
 /* Light Mode (Industrial Orange Brutalism) */
 :root {
   /* Core Colors */
-  --bg-color: #fff7ed;         /* Warmer, paper-like off-white */
-  --card-bg: #ffffff;          /* Stark White */
-  --text-color: #1c1917;       /* Warm Black */
+  --bg-color: #fff7ed;
+  --card-bg: #ffffff;
+  --text-color: #1c1917;
   
   /* The Orange Palette */
-  --hero-bg: #ea580c;          /* Burnt Orange (Solid) */
-  --accent-color: #fb923c;     /* Safety Orange (Highlight) */
-  --accent-secondary: #fdba74; /* Soft Orange (Secondary) */
-  --accent-tertiary: #ffedd5;  /* Pale Orange (Backgrounds) */
+  --hero-bg: #ea580c;
+  --accent-color: #fb923c;
+  --accent-secondary: #fdba74;
+  --accent-tertiary: #ffedd5;
   
   /* Brutalist Structure */
   --border-color: #000000;
-  --shadow-color: #000000;     /* Pitch Black Shadows */
+  --shadow-color: #000000;
   --border-width: 3px;
   
-  /* THE CONSISTENCY FIX: One variable for all shadows */
+  /* SHADOWS (Desktop Default) */
   --hard-shadow: 6px 6px 0px var(--shadow-color);
   --hard-shadow-hover: 10px 10px 0px var(--shadow-color);
 }
 
 /* Dark Mode (Molten Core) */
 body.dark-mode {
-  --bg-color: #1c1917;         /* Warm Carbon Black */
-  --text-color: #ffedd5;       /* Pale Orange Text */
-  --card-bg: #292524;          /* Dark Grey-Brown Card */
-  
-  --accent-color: #f97316;     /* Neon Orange */
-  --accent-secondary: #fbbf24; /* Amber/Gold */
-  --accent-tertiary: #7c2d12;  /* Deep Rust */
-  
-  --border-color: #ffedd5;     /* Off-white borders (Crucial for contrast) */
-  --shadow-color: #000000;     /* Keep shadows black for depth */
-  --hero-bg: #0c0a09;          /* Obsidian Black */
+  --bg-color: #1c1917;
+  --text-color: #ffedd5;
+  --card-bg: #292524;
+  --accent-color: #f97316;
+  --accent-secondary: #fbbf24;
+  --accent-tertiary: #7c2d12;
+  --border-color: #ffedd5;
+  --shadow-color: #000000;
+  --hero-bg: #0c0a09;
 }
 
 /* ===============================
-   CUSTOM SCROLLBAR (Neo-Brutalist)
+   CUSTOM SCROLLBAR
 =============================== */
-
-/* Firefox Support */
 html {
   scrollbar-width: auto;
   scrollbar-color: var(--accent-color) var(--bg-color);
 }
-
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  width: 18px; /* Chunky width */
-}
-
+::-webkit-scrollbar { width: 18px; }
 ::-webkit-scrollbar-track {
   background: var(--bg-color);
-  border-left: var(--border-width) solid var(--border-color); /* Hard line separating content */
+  border-left: var(--border-width) solid var(--border-color);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--accent-color);
-  border: var(--border-width) solid var(--border-color); /* Boxed in */
-  border-radius: 0; /* No roundness allowed */
+  border: var(--border-width) solid var(--border-color);
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color); /* Invert to black/text-color on hover */
-}
+::-webkit-scrollbar-thumb:hover { background: var(--text-color); }
 
 /* ===============================
    AMBIENT ANIMATIONS
 =============================== */
-
-/* 1. CRT Scanline Overlay */
 @keyframes scanline {
   0% { transform: translateY(0%); }
   100% { transform: translateY(100%); }
 }
-
-/* 2. Gentle Floating (Profile Pic) */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
-
-/* 3. Drifting Background Dots */
 @keyframes drift {
   0% { background-position: 0 0; }
   100% { background-position: 40px 40px; }
 }
-
-/* 4. Glitch/Jerk Hover Effect */
 @keyframes jerk {
   0% { transform: translate(0, 0) rotate(-1deg); }
   25% { transform: translate(-2px, 2px) rotate(0deg); }
@@ -121,15 +99,13 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
-  
-  /* Background Pattern */
+  overflow-x: hidden; /* Prevents horizontal scroll */
   background-image: radial-gradient(var(--text-color) 1px, transparent 1px);
   background-size: 40px 40px;
-  animation: drift 30s linear infinite; /* Slower, smoother drift */
+  animation: drift 30s linear infinite;
 }
 
-/* CRT Overlay Effect */
+/* CRT Overlay */
 body::before {
   content: " ";
   display: block;
@@ -138,7 +114,7 @@ body::before {
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
   z-index: 9999;
   background-size: 100% 2px, 3px 100%;
-  pointer-events: none; /* Allows clicking through it */
+  pointer-events: none;
 }
 
 h1, h2, h3, h4 {
@@ -158,18 +134,14 @@ h2 {
   display: table;
   margin-left: auto;
   margin-right: auto;
-  
-  /* H2 Styling */
   background: var(--accent-color);
   color: #000; 
   padding: 15px 30px;
   border: var(--border-width) solid var(--border-color);
-  
-  /* Consistent Shadow Variable */
   box-shadow: var(--hard-shadow);
-  
   transform: rotate(-1deg);
   transition: transform 0.2s;
+  max-width: 90%; /* Prevents H2 overflow on mobile */
 }
 
 h2:hover {
@@ -207,7 +179,8 @@ section {
   padding: 0 10px;
   border: 2px solid var(--border-color);
   text-decoration: none;
-  box-shadow: 4px 4px 0 var(--shadow-color); /* Smaller shadow for nav */
+  box-shadow: 4px 4px 0 var(--shadow-color);
+  white-space: nowrap; /* Prevents logo breaking */
 }
 
 .top-nav .nav-right {
@@ -244,11 +217,6 @@ section {
   box-shadow: 4px 4px 0 var(--shadow-color);
 }
 
-.top-nav .toggle-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--shadow-color);
-}
-
 /* ===============================
    HERO SECTION
 =============================== */
@@ -274,9 +242,7 @@ section {
   background: var(--bg-color);
   padding: 60px;
   border: var(--border-width) solid var(--border-color);
-  
-  /* Consistent Shadow Variable */
-  box-shadow: 15px 15px 0 var(--shadow-color); /* Hero gets a bigger shadow */
+  box-shadow: 15px 15px 0 var(--shadow-color);
 }
 
 .hero-text { flex: 1; }
@@ -286,13 +252,9 @@ section {
   width: 280px; height: 280px;
   border: var(--border-width) solid var(--border-color);
   object-fit: cover;
-  
-  /* Consistent Shadow */
   box-shadow: var(--hard-shadow);
   filter: grayscale(100%);
   transition: filter 0.3s;
-  
-  /* Animation: Float */
   animation: float 6s ease-in-out infinite;
 }
 .profile-pic:hover { filter: grayscale(0%); }
@@ -329,28 +291,20 @@ section {
   background: var(--card-bg);
   border: var(--border-width) solid var(--border-color);
   padding: 30px;
-  
-  /* Consistent Shadow Variable */
   box-shadow: var(--hard-shadow);
-  
   border-radius: 0;
   transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Ensures it doesn't overflow container */
 }
 
 .card:hover, .exp-item:hover {
   transform: translate(-4px, -4px);
-  
-  /* Consistent Hover Shadow Variable */
   box-shadow: var(--hard-shadow-hover);
-  
   background: #ffffff;
   color: #000; 
 }
 
-/* Hover Content Reset */
-.card:hover h3, .card:hover p, .card:hover li {
-   color: #000;
-}
+.card:hover h3, .card:hover p, .card:hover li { color: #000; }
 
 .about-img-side {
   width: 100%;
@@ -370,15 +324,7 @@ section {
   font-weight: 700;
   display: inline-block;
   margin: 5px 5px 0 0;
-  
-  /* Small elements get a hard-coded small shadow */
   box-shadow: 4px 4px 0 var(--shadow-color);
-}
-
-.skills-tags span:hover {
-  background: var(--accent-color);
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--shadow-color);
 }
 
 .facts-list {
@@ -387,17 +333,13 @@ section {
   background: var(--accent-secondary);
   color: #000;
   border: var(--border-width) solid var(--border-color);
-  
-  /* Consistent Shadow Variable */
   box-shadow: var(--hard-shadow);
 }
-
 .facts-list li {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 3px dotted #000;
   font-weight: 700;
-  font-size: 1.1rem;
 }
 
 /* ===============================
@@ -411,8 +353,6 @@ section {
   display: inline-block;
   margin-bottom: 15px;
   font-size: 1.5rem;
-  
-  /* Title Shadow */
   box-shadow: 4px 4px 0 var(--shadow-color);
 }
 
@@ -424,7 +364,7 @@ section {
 .project-grid a.card { text-decoration: none; color: inherit; }
 
 /* ===============================
-   SKILLS LIST
+   SKILLS LIST & FOOTER
 =============================== */
 .skills-list {
   display: flex;
@@ -442,22 +382,9 @@ section {
   font-weight: 700;
   font-size: 1.2rem;
   border: var(--border-width) solid var(--border-color);
-  
-  /* Consistent Shadow Variable */
   box-shadow: var(--hard-shadow);
-  
-  transition: 0.2s;
-}
-.skills-list li:hover {
-  background: var(--accent-color);
-  color: #000;
-  transform: translate(-4px, -4px);
-  box-shadow: var(--hard-shadow-hover);
 }
 
-/* ===============================
-   BUTTONS & FOOTER
-=============================== */
 .btn {
   padding: 18px 50px;
   background: #000;
@@ -470,17 +397,8 @@ section {
   display: inline-block;
   margin-top: 25px;
   border: var(--border-width) solid var(--border-color);
-  
-  /* Shadow is accent color for buttons */
   box-shadow: 8px 8px 0 var(--accent-color);
   transition: all 0.2s;
-}
-
-.btn:hover {
-  background: var(--accent-color);
-  color: #000;
-  box-shadow: 8px 8px 0 #000;
-  transform: translate(-2px, -2px);
 }
 
 .resume-container {
@@ -489,8 +407,6 @@ section {
   padding: 60px;
   background: var(--accent-tertiary);
   border: var(--border-width) solid var(--border-color);
-  
-  /* Consistent Shadow Variable */
   box-shadow: var(--hard-shadow);
 }
 
@@ -508,16 +424,82 @@ footer a {
   text-decoration: none;
   border-bottom: 2px solid var(--accent-color);
 }
-footer a:hover {
-  background: var(--accent-color);
-  color: #000;
-}
 
 /* ===============================
-   RESPONSIVE
+   MOBILE / RESPONSIVE (Strict Fixes)
 =============================== */
 @media (max-width: 992px) {
-  .hero-container { flex-direction: column; text-align: center; padding: 30px; }
+  
+  /* 1. Global Scale Down */
+  :root {
+    --hard-shadow: 4px 4px 0px var(--shadow-color); /* Smaller shadows */
+  }
+
+  section {
+    padding: 60px 20px; /* Reduced padding */
+  }
+
+  /* 2. Scrollbar Thinner */
+  ::-webkit-scrollbar { width: 8px; }
+
+  /* 3. Navigation Stack */
+  .top-nav {
+    position: relative; /* Un-fix nav so it scrolls with page */
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .top-nav .nav-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  
+  .top-nav a, .top-nav .toggle-btn {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  /* 4. Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+  
+  .hero h1 { font-size: 2.8rem; /* Much smaller H1 */ }
+  .hero p { font-size: 1.1rem; }
+  
+  .hero-image {
+    width: 100%;
+    flex: none;
+  }
+  
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* 5. Content Layouts */
   .about-container { grid-template-columns: 1fr; }
-  h2 { font-size: 2.2rem; }
+  .project-grid { grid-template-columns: 1fr; }
+  
+  h2 {
+    font-size: 2rem;
+    transform: rotate(0deg); /* Remove rotation to save space */
+    width: 100%;
+  }
+
+  .resume-container { padding: 30px; }
+  
+  .btn { width: 100%; text-align: center; }
 }
