@@ -1,6 +1,6 @@
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth"
@@ -14,17 +14,19 @@ const body = document.body;
 // Load saved theme from localStorage
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
-  toggleBtn.textContent = "☀️ Light Mode";
+  toggleBtn.textContent = "☀️ LIGHT MODE";
+} else {
+  toggleBtn.textContent = "🌙 DARK MODE";
 }
 
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
 
   if (body.classList.contains("dark-mode")) {
-    toggleBtn.textContent = "☀️ Light Mode";
+    toggleBtn.textContent = "☀️ LIGHT MODE";
     localStorage.setItem("theme", "dark");
   } else {
-    toggleBtn.textContent = "🌙 Dark Mode";
+    toggleBtn.textContent = "🌙 DARK MODE";
     localStorage.setItem("theme", "light");
   }
 });

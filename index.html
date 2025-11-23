@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,82 +8,90 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/profile.jpeg">
 </head>
+
 <body class="fade-in">
   <nav class="top-nav">
     <div class="nav-left">
       <span class="logo">Bhaskar Biswas</span>
     </div>
     <div class="nav-right">
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=studybhaskar654@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=studybhaskar654@gmail.com" target="_blank"
+        rel="noopener noreferrer">Email</a>
       <a href="https://github.com/PyroSage" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="https://linkedin.com/in/bhaskar-biswas-623222251" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
+      <button id="theme-toggle" class="toggle-btn">🌙 DARK MODE</button>
     </div>
   </nav>
 
   <header class="hero">
-    <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="profile-pic" width="160" height="160">
-    <h1>Hi, I’m Bhaskar Biswas</h1>
-    <p>IIT Bombay, Engineering Physics with minor in Robotics, B.Tech(2026)</p>
-    <a href="#experience" class="btn">See My Work</a>
-    </header>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Hi, I’m Bhaskar Biswas</h1>
+        <p>IIT Bombay, Engineering Physics with minor in Robotics, B.Tech(2026)</p>
+        <a href="#experience" class="btn">See My Work</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/profile.jpeg" alt="Bhaskar Biswas" class="profile-pic" width="280" height="280">
+      </div>
+    </div>
+  </header>
 
   <section id="about">
-  <h2>About Me</h2>
-  <div class="about-container">
-    
-    <div class="about-left">
-      
-      <div class="about-block">
-        <img src="assets/jlr.jpg" alt="Jaguar Land Rover Internship" class="about-img-side">
-        <div class="about-text">
-          <p>
-            I interned at <strong>Jaguar Land Rover (VP–Propulsion Software)</strong>, 
-            where I developed automation tools in Python and MATLAB for ECU validation 
-            and AUTOSAR workflows. Following the success of my internship, I received 
-            a <strong>Pre-Placement Offer (PPO)</strong> and will be joining JLR as a 
-            <strong>full-time engineer</strong> soon.
-          </p>
+    <h2>About Me</h2>
+    <div class="about-container">
+
+      <div class="about-left">
+
+        <div class="about-block">
+          <img src="assets/jlr.jpg" alt="Jaguar Land Rover Internship" class="about-img-side">
+          <div class="about-text">
+            <p>
+              I interned at <strong>Jaguar Land Rover (VP–Propulsion Software)</strong>,
+              where I developed automation tools in Python and MATLAB for ECU validation
+              and AUTOSAR workflows. Following the success of my internship, I received
+              a <strong>Pre-Placement Offer (PPO)</strong> and will be joining JLR as a
+              <strong>full-time engineer</strong> soon.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <img src="assets/racing.jpg" alt="IITB Racing Driverless Team" class="about-img-side">
+          <div class="about-text">
+            <p>
+              I was a part of the <strong>IITB Racing Driverless team</strong>, working across
+              perception, planning, and controls for autonomous systems. I enjoy building
+              things end-to-end — from embedded hardware to ML pipelines — and writing about what I learn.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-tags">
+          <span>Python</span>
+          <span>C++</span>
+          <span>MATLAB</span>
+          <span>ROS1/ROS2</span>
+          <span>PyTorch</span>
+          <span>OpenCV</span>
+          <span>STM32</span>
+          <span>PCB Design</span>
         </div>
       </div>
 
-      <div class="about-block">
-        <img src="assets/racing.jpg" alt="IITB Racing Driverless Team" class="about-img-side">
-        <div class="about-text">
-          <p>
-            I was a part of the <strong>IITB Racing Driverless team</strong>, working across 
-            perception, planning, and controls for autonomous systems. I enjoy building 
-            things end-to-end — from embedded hardware to ML pipelines — and writing about what I learn.
-          </p>
-        </div>
+      <div class="about-right">
+        <ul class="facts-list">
+          <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
+          <li>🤖 Research Interests: Robotics, Control Systems, Optimization, Reinforcement Learning</li>
+          <li>🏆 Top IIT JEE Ranker | Member of IITB Racing Driverless</li>
+          <li>🌍 Fluent in English, Hindi, Bengali | Learning Japanese</li>
+          <li>⚡ Enthusiast in Autonomous Systems, Embedded Design, and AI</li>
+          <li>📍 Based in Mumbai, India</li>
+          <li>📚 Always Learning & Exploring New Technologies</li>
+        </ul>
       </div>
 
-      <div class="skills-tags">
-        <span>Python</span>
-        <span>C++</span>
-        <span>MATLAB</span>
-        <span>ROS1/ROS2</span>
-        <span>PyTorch</span>
-        <span>OpenCV</span>
-        <span>STM32</span>
-        <span>PCB Design</span>
-      </div>
     </div>
-    
-    <div class="about-right">
-      <ul class="facts-list">
-        <li>🎓 Incoming Engineer at Jaguar Land Rover | B.Tech Engineering Physics, IIT Bombay</li>
-        <li>🤖 Research Interests: Robotics, Control Systems, Optimization, Reinforcement Learning</li>
-        <li>🏆 Top IIT JEE Ranker | Member of IITB Racing Driverless</li>
-        <li>🌍 Fluent in English, Hindi, Bengali | Learning Japanese</li>
-        <li>⚡ Enthusiast in Autonomous Systems, Embedded Design, and AI</li>
-        <li>📍 Based in Mumbai, India</li>
-        <li>📚 Always Learning & Exploring New Technologies</li>
-      </ul>
-    </div>
-    
-  </div>
-</section>
+  </section>
 
 
   <section id="experience">
@@ -101,7 +110,8 @@
         <li>Worked on computer vision, SLAM, motion planning, and controls.</li>
         <li>Contributed to ROS1 → ROS2 migration for autonomous stack.</li>
         <li>Built a 1/5th scale driverless prototype with custom PCBs and Virtual CAN setup.</li>
-        <li>Published on arXiv: “IIT Bombay Racing Driverless: Autonomous Driving Stack for Formula Student AI,” covering research and development in Computer Vision, SLAM, Motion Planning, and Controls.</li>
+        <li>Published on arXiv: “IIT Bombay Racing Driverless: Autonomous Driving Stack for Formula Student AI,”
+          covering research and development in Computer Vision, SLAM, Motion Planning, and Controls.</li>
       </ul>
     </div>
     <div class="exp-item">
@@ -114,7 +124,8 @@
     <div class="exp-item">
       <h3>B.Tech Project — IIT Bombay (Jan '24 – Present)</h3>
       <ul>
-        <li>Worked on distributed optimization algorithms for autonomous multi-agent systems using Euler-Lagrange dynamics.</li>
+        <li>Worked on distributed optimization algorithms for autonomous multi-agent systems using Euler-Lagrange
+          dynamics.</li>
         <li>Implemented simulation studies in Python and MATLAB to validate theoretical results.</li>
         <li>Research paper currently in progress.</li>
       </ul>
@@ -163,54 +174,54 @@
   </section>
 
   <section id="education">
-  <h2>Education</h2>
-  <p><strong>Indian Institute of Technology, Bombay</strong> — Engineering Physics, B.Tech (Expected 2026)</p>
-  
-  <h3>Relevant Coursework</h3>
+    <h2>Education</h2>
+    <p><strong>Indian Institute of Technology, Bombay</strong> — Engineering Physics, B.Tech (Expected 2026)</p>
 
-  <div class="coursework-grid">
-    <div class="course-category">
-      <h4>Computer Science and Robotics</h4>
-      <ul class="course-list">
-        <li>Computer Programming and Utilisation</li>
-        <li>Makerspace</li>
-        <li>Artificial Intelligence and Data Science</li>
-        <li>Control Theory</li>
-        <li>Robotics</li>
-        <li>Non-linear Dynamics</li>
-        <li>Fundamentals of Digital Image Processing</li>
-        <li>Nanodevices and Applications</li>
-      </ul>
-    </div>
+    <h3>Relevant Coursework</h3>
 
-    <div class="course-category">
-      <h4>Physics and Electronics</h4>
-      <ul class="course-list">
-        <li>Quantum Physics</li>
-        <li>Classical Mechanics</li>
-        <li>Analog Electronics</li>
-        <li>Digital Electronics & Microprocessors</li>
-        <li>Statistical Mechanics</li>
-        <li>Numerical Analysis</li>
-        <li>Electromagnetic Theory</li>
-        <li>Introduction to Condensed Matter Physics</li>
-        <li>Light Matter Interaction</li>
-      </ul>
-    </div>
+    <div class="coursework-grid">
+      <div class="course-category">
+        <h4>Computer Science and Robotics</h4>
+        <ul class="course-list">
+          <li>Computer Programming and Utilisation</li>
+          <li>Makerspace</li>
+          <li>Artificial Intelligence and Data Science</li>
+          <li>Control Theory</li>
+          <li>Robotics</li>
+          <li>Non-linear Dynamics</li>
+          <li>Fundamentals of Digital Image Processing</li>
+          <li>Nanodevices and Applications</li>
+        </ul>
+      </div>
 
-    <div class="course-category">
-      <h4>Mathematics</h4>
-      <ul class="course-list">
-        <li>Calculus</li>
-        <li>Linear Algebra</li>
-        <li>Differential Equations</li>
-        <li>Complex Analysis and Integral Transform</li>
-        <li>Estimation on Lie Groups</li>
-        <li>Analytical and Geometric Dynamics</li>
-      </ul>
+      <div class="course-category">
+        <h4>Physics and Electronics</h4>
+        <ul class="course-list">
+          <li>Quantum Physics</li>
+          <li>Classical Mechanics</li>
+          <li>Analog Electronics</li>
+          <li>Digital Electronics & Microprocessors</li>
+          <li>Statistical Mechanics</li>
+          <li>Numerical Analysis</li>
+          <li>Electromagnetic Theory</li>
+          <li>Introduction to Condensed Matter Physics</li>
+          <li>Light Matter Interaction</li>
+        </ul>
+      </div>
+
+      <div class="course-category">
+        <h4>Mathematics</h4>
+        <ul class="course-list">
+          <li>Calculus</li>
+          <li>Linear Algebra</li>
+          <li>Differential Equations</li>
+          <li>Complex Analysis and Integral Transform</li>
+          <li>Estimation on Lie Groups</li>
+          <li>Analytical and Geometric Dynamics</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="resume">
     <h2>Resume</h2>
@@ -230,4 +241,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
